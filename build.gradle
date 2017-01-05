@@ -1,0 +1,16 @@
+apply plugin: 'java'
+
+
+repositories {
+  mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+apply plugin: 'application'
+mainClassName = "com.semaks.Runner"
+
+dependencies {
+
+}
