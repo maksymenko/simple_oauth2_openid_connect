@@ -1,3 +1,8 @@
+## Quick Start
+```
+$ gradle run
+```
+
 ## Steps
 ```
 $ gradle init --type=java-library
@@ -19,4 +24,9 @@ mainClassName = "com.semaks.runner"
 * Run
 ```
 gradle run
+```
+
+* Http dependencies
+```
+compile group: 'com.sun.net.httpserver', name: 'http', version: '20070405'
 ```

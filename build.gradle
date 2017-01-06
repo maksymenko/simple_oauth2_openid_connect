@@ -1,5 +1,5 @@
 apply plugin: 'java'
-
+apply plugin: 'eclipse'
 
 repositories {
   mavenCentral()
@@ -12,5 +12,5 @@ apply plugin: 'application'
 mainClassName = "com.semaks.Runner"
 
 dependencies {
-
+	compile group: 'com.sun.net.httpserver', name: 'http', version: '20070405'
 }
