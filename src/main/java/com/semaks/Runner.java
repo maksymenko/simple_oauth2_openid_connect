@@ -12,6 +12,7 @@ public class Runner {
   public static void main(String[] args) throws IOException {
     InetSocketAddress port = new InetSocketAddress(PORT);
     HttpServer httpServer = HttpServer.create(port, 0);
+    httpServer.createContext("/", new DefaultHandler());
     httpServer.createContext("/auth", new AuthHandler());
     httpServer.start();
     System.out.println("Server started. http://localhost:" + PORT);
