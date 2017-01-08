@@ -1,32 +1,17 @@
 ## Quick Start
+### Setup project, create credentials and setup redirect url
+* https://console.developers.google.com/
+* get "client ID" and "client secret"
 ```
-$ gradle run
-```
-
-## Steps
-```
-$ gradle init --type=java-library
-```
-* set maven central repository
-```
-mavenCentral()
-```
-* Java version
-```
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-```
-* App execution config
-```
-apply plugin: 'application'
-mainClassName = "com.semaks.runner"
-```
-* Run
-```
-gradle run
+$ gradle run -Dclient_id={ClinetID}
 ```
 
-* Http dependencies
-```
-compile group: 'com.sun.net.httpserver', name: 'http', version: '20070405'
-```
+## Steps for authenticating user using "server flow".
+
+### Send redirect response to authentication endpoint
+* retrieve authorization url by discovery url https://accounts.google.com/.well-known/openid-configuration
+* get url by key "authorization_endpoint"
+
+
+## References
+* https://developers.google.com/identity/protocols/OpenIDConnect

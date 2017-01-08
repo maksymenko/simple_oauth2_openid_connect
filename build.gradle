@@ -9,8 +9,18 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 apply plugin: 'application'
-mainClassName = "com.semaks.Runner"
+mainClassName = 'com.semaks.Runner'
+run {
+  /* Can pass all the properties: */
+  systemProperties System.getProperties()
+
+  /* Or just each by name: */
+  systemProperty "client_id", System.getProperty("client_id")
+}
 
 dependencies {
-	compile group: 'com.sun.net.httpserver', name: 'http', version: '20070405'
+  compile group: 'com.sun.net.httpserver', name: 'http', version: '20070405'
+  compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
+  compile group: 'org.json', name: 'json', version: '20160810'
+  compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
 }
