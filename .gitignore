@@ -9,3 +9,4 @@ build/
 .settings/
 .idea/
 simple_oauth2_openid_connect.iml
+.vscode

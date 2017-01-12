@@ -11,11 +11,7 @@ targetCompatibility = 1.8
 apply plugin: 'application'
 mainClassName = 'com.semaks.Runner'
 run {
-  /* Can pass all the properties: */
   systemProperties System.getProperties()
-
-  /* Or just each by name: */
-  systemProperty "client_id", System.getProperty("client_id")
 }
 
 dependencies {
