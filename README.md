@@ -1,17 +1,14 @@
+# OpenIDConnect "server flow" authentication. Simple application.
+
 ## Quick Start
 ### Setup project, create credentials and setup redirect url
 * https://console.developers.google.com/
-* get "client ID" and "client secret"
+* pass "client ID", "client secret" and redirectUrl to application.
+
+### Start Application
 ```
-$ gradle run -Dclient_id={ClinetID}
+$ gradle run -Dclient_id={ClinetID} -Dclient_secret={ClientSecret} -Dclient_redirect_uri={ClientRedirectUrl}
 ```
-
-## Steps for authenticating user using "server flow".
-
-### Send redirect response to authentication endpoint
-* retrieve authorization url by discovery url https://accounts.google.com/.well-known/openid-configuration
-* get url by key "authorization_endpoint"
-
 
 ## References
 * https://developers.google.com/identity/protocols/OpenIDConnect
